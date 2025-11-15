@@ -1,0 +1,1 @@
+# min-node-app-template
