@@ -1,0 +1,45 @@
+{
+  "name": "@template/cli",
+  "version": "0.1.0",
+  "description": "Command-line interface",
+  "keywords": [
+    "cli",
+    "command-line"
+  ],
+  "type": "module",
+  "main": "dist/bundled.js",
+  "bin": "dist/bundled.js",
+  "files": [
+    "dist/bundled.js"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "build:bundle": "node scripts/rolldown-bundle.js",
+    "prepare": "tsc -b",
+    "test": "vitest run",
+    "lint": "biome check --write src test",
+    "lint:ci": "biome check src test",
+    "format": "biome format --write src test",
+    "format:check": "biome format src test"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@template/core": "workspace:*",
+    "@template/mcp": "workspace:*",
+    "@template/web": "workspace:*",
+    "rolldown": "1.0.0-beta.36",
+    "vitest": "latest",
+    "vite": "latest"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmwen/min-node-app-template.git",
+    "directory": "packages/cli"
+  },
+  "license": "MIT"
+}
