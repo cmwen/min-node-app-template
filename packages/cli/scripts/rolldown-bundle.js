@@ -12,7 +12,7 @@ async function bundle() {
   try {
     const build = await rolldown({
       input: join(packageRoot, 'dist/index.js'),
-      external: [],
+      external: ['commander'], // Commander.js has issues with bundling
       platform: 'node',
     });
 
@@ -34,8 +34,8 @@ async function bundle() {
 
     console.log('✅ Bundle created: dist/bundled.js');
 
-    const stats = JSON.parse(readFileSync(join(packageRoot, 'dist/bundled.js'), 'utf-8')).length;
-    console.log(`📊 Size: ${(stats / 1024).toFixed(2)} KB\n`);
+    const stats = readFileSync(join(packageRoot, 'dist/bundled.js'), 'utf-8');
+    console.log(`📊 Size: ${(stats.length / 1024).toFixed(2)} KB\n`);
   } catch (error) {
     console.error('❌ Bundling failed:', error);
     process.exit(1);

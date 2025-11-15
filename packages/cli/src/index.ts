@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import { CoreService } from '@template/core';
 import { Command } from 'commander';
 
