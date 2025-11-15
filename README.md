@@ -9,10 +9,10 @@ This template provides a modern, production-ready foundation for building Node.j
 
 ## ✨ Features
 
+- 🎯 **Unified CLI** - Single executable with three modes: CLI, Web, and MCP
 - 🏗️ **Monorepo structure** with pnpm workspaces
 - 📦 **TypeScript** with strict mode
 - 🎨 **Biome** for lightning-fast linting and formatting
-- ⚡ **Vite** for fast web development
 - 📦 **Rolldown** for optimized CLI bundling
 - 🧪 **Vitest** for unit testing
 - 🤖 **MCP support** for AI agent integration
@@ -20,14 +20,17 @@ This template provides a modern, production-ready foundation for building Node.j
 - 🐳 **Devcontainer** ready
 - 🔒 **Dependabot** configured
 
-## 📦 Packages
+## 📦 Package Structure
 
 This monorepo contains:
 
 - **`@template/core`** - Core business logic and shared utilities
-- **`@template/cli`** - Command-line interface with Commander.js
-- **`@template/web`** - Web application with Express API and Preact UI
-- **`@template/mcp`** - Model Context Protocol server for AI agents
+- **`@template/cli`** - Unified CLI with three modes:
+  - **CLI mode** - Command-line interface with Commander.js
+  - **Web mode** - Express REST API server
+  - **MCP mode** - Model Context Protocol server for AI agents
+- **`@template/web`** - Web UI components (Preact, used by CLI web mode)
+- **`@template/mcp`** - MCP server implementation (used by CLI mcp mode)
 
 ## 🚀 Quick Start
 
@@ -56,30 +59,47 @@ pnpm lint
 pnpm format
 ```
 
-### Running the Applications
+### Running the Unified CLI
 
-#### CLI
+The CLI supports three modes:
+
+#### CLI Mode (Default Commands)
 ```bash
 cd packages/cli
 pnpm build
+
+# Basic commands
 node dist/index.js greet "World"
 node dist/index.js info
+node dist/index.js --help
 ```
 
-#### Web
+#### Web Mode
 ```bash
-cd packages/web
-pnpm dev  # Development mode with Vite
-# Or build and run:
-pnpm build
-node dist/server.js
+# Start web server with REST API
+node dist/index.js web --port 3000
+
+# Or use bundled version
+node dist/bundled.js web
 ```
 
-#### MCP Server
+#### MCP Mode
 ```bash
-cd packages/mcp
-pnpm build
-node dist/server.js
+# Start MCP server for AI agent integration
+node dist/index.js mcp
+
+# Or use bundled version
+node dist/bundled.js mcp
+```
+
+### Building the Bundle
+
+```bash
+cd packages/cli
+pnpm build:bundle
+
+# Creates a single bundled executable at dist/bundled.js
+# This includes all three modes in one file
 ```
 
 ## 🏗️ Project Structure

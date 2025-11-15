@@ -23,25 +23,37 @@ importers:
 
   packages/cli:
     dependencies:
-      commander:
-        specifier: ^12.1.0
-        version: 12.1.0
-    devDependencies:
+      '@modelcontextprotocol/sdk':
+        specifier: ^1.4.0
+        version: 1.22.0
       '@template/core':
         specifier: workspace:*
         version: link:../core
-      '@template/mcp':
-        specifier: workspace:*
-        version: link:../mcp
-      '@template/web':
-        specifier: workspace:*
-        version: link:../web
+      commander:
+        specifier: ^12.1.0
+        version: 12.1.0
+      express:
+        specifier: ^4.19.2
+        version: 4.21.2
+      preact:
+        specifier: ^10.24.2
+        version: 10.27.2
+      zod:
+        specifier: ^3.23.8
+        version: 3.25.76
+    devDependencies:
+      '@preact/preset-vite':
+        specifier: ^2.9.1
+        version: 2.10.2(@babel/core@7.28.5)(preact@10.27.2)(vite@6.4.1(@types/node@24.10.1))
+      '@types/express':
+        specifier: latest
+        version: 5.0.5
       rolldown:
         specifier: 1.0.0-beta.36
         version: 1.0.0-beta.36
       vite:
-        specifier: latest
-        version: 7.2.2(@types/node@24.10.1)
+        specifier: ^6.0.7
+        version: 6.4.1(@types/node@24.10.1)
       vitest:
         specifier: latest
         version: 4.0.9(@types/node@24.10.1)

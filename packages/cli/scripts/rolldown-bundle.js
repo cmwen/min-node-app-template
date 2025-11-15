@@ -12,7 +12,15 @@ async function bundle() {
   try {
     const build = await rolldown({
       input: join(packageRoot, 'dist/index.js'),
-      external: ['commander'], // Commander.js has issues with bundling
+      external: [
+        'commander',
+        'express',
+        'preact',
+        'zod',
+        '@modelcontextprotocol/sdk/server/index.js',
+        '@modelcontextprotocol/sdk/server/stdio.js',
+        '@modelcontextprotocol/sdk/types.js',
+      ],
       platform: 'node',
     });
 

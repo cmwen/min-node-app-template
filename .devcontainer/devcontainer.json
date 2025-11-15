@@ -20,8 +20,6 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
         "biomejs.biome",
         "ms-vscode.vscode-typescript-next",
         "GitHub.copilot",
