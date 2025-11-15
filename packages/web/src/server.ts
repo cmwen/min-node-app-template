@@ -20,6 +20,12 @@ const coreService = new CoreService(config);
 // Middleware
 app.use(express.json());
 
+// NOTE: For production use, consider adding rate limiting middleware
+// Example: npm install express-rate-limit
+// import rateLimit from 'express-rate-limit';
+// const limiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 100 });
+// app.use('/api/', limiter);
+
 // API Routes
 app.get('/api/health', (_req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
