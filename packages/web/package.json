@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@template/core": "workspace:*",
-    "express": "^4.19.2",
+    "express": "^5.1.0",
     "preact": "^10.24.2"
   },
   "devDependencies": {
