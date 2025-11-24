@@ -20,7 +20,7 @@
     "clean": "git clean -Xdf && rm -rf packages/**/dist"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.3",
+    "@biomejs/biome": "^2.3.7",
     "@types/node": "latest",
     "typescript": "latest",
     "vitest": "latest"
