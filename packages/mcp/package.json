@@ -27,8 +27,8 @@
   },
   "dependencies": {
     "@template/core": "workspace:*",
-    "@modelcontextprotocol/sdk": "^1.4.0",
-    "zod": "^4.1.12"
+    "@modelcontextprotocol/sdk": "^1.23.0",
+    "zod": "^4.1.13"
   },
   "devDependencies": {
     "vitest": "latest"
