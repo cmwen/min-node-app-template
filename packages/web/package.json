@@ -28,8 +28,8 @@
   },
   "dependencies": {
     "@template/core": "workspace:*",
-    "express": "^5.1.0",
-    "preact": "^10.24.2"
+    "express": "^5.2.1",
+    "preact": "^10.28.0"
   },
   "devDependencies": {
     "@types/express": "latest",
