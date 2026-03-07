@@ -22,7 +22,7 @@
     "format:check": "biome format src test"
   },
   "dependencies": {
-    "zod": "^4.1.12"
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "vitest": "latest"
