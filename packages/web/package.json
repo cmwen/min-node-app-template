@@ -33,12 +33,13 @@
   },
   "devDependencies": {
     "@types/express": "latest",
+    "@types/node": "latest",
     "@types/supertest": "latest",
-    "@preact/preset-vite": "^2.9.1",
+    "@preact/preset-vite": "^2.10.5",
     "cpy-cli": "latest",
     "supertest": "latest",
     "vitest": "latest",
-    "vite": "^7.2.2"
+    "vite": "^8.0.3"
   },
   "publishConfig": {
     "access": "public"

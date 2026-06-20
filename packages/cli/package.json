@@ -32,10 +32,11 @@
   },
   "devDependencies": {
     "@types/express": "latest",
-    "@preact/preset-vite": "^2.9.1",
-    "rolldown": "1.0.0-beta.50",
+    "@types/node": "latest",
+    "@preact/preset-vite": "^2.10.5",
+    "rolldown": "1.0.0-rc.12",
     "vitest": "latest",
-    "vite": "^7.2.2"
+    "vite": "^8.0.3"
   },
   "publishConfig": {
     "access": "public"
