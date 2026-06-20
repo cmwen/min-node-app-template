@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- Node.js >= 18.18
+- Node.js >= 20.19
 - pnpm >= 9 (will be installed via corepack)
 - Git
 

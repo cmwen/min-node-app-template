@@ -72,7 +72,7 @@ pnpm format
 
 - **CI Pipeline**: Runs on all PRs and pushes to main
   - Lints, formats, builds, and tests all packages
-  - Tests on Node.js 18.x and 20.x
+  - Tests on Node.js 20.x and 22.x
   
 - **Release Pipeline**: Triggers on version tags (`v*`)
   - Runs full test suite

@@ -6,7 +6,7 @@ This guide is for contributors working on this template or projects based on it.
 
 ### Prerequisites
 
-- Node.js >= 18.18
+- Node.js >= 20.19
 - pnpm >= 9 (installed via corepack)
 - Git
 - A code editor (VS Code recommended)
@@ -21,7 +21,7 @@ If using VS Code with Docker:
 4. Wait for the container to build and dependencies to install
 
 The devcontainer includes:
-- Node.js 20
+- Node.js 20 or 22
 - pnpm configured
 - Recommended VS Code extensions
 - Git and GitHub CLI

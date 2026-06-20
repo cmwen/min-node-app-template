@@ -4,7 +4,7 @@
   "description": "Minimal Node.js app template - monorepo with CLI, Web, and MCP support",
   "packageManager": "pnpm@10.15.1",
   "engines": {
-    "node": ">=18.18",
+    "node": ">=20.19",
     "pnpm": ">=9"
   },
   "workspaces": [
@@ -20,7 +20,7 @@
     "clean": "git clean -Xdf && rm -rf packages/**/dist"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.3",
+    "@biomejs/biome": "^2.4.9",
     "@types/node": "latest",
     "typescript": "latest",
     "vitest": "latest"
